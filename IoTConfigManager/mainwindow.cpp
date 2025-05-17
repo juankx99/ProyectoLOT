@@ -6,14 +6,17 @@
 #include <QMessageBox>
 #include <QLineEdit>
 #include "loginwindow.h"
+#include <QTimer>
+#include <QRandomGenerator>
 
 MainWindow::MainWindow(const User &user, QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow), currentUser(user)
 {
     ui->setupUi(this);
 
-    ui->deviceTableWidget->setColumnCount(4);
-    ui->deviceTableWidget->setHorizontalHeaderLabels(QStringList() << "Nombre" << "Tipo" << "IP" << "Calibración");
+    ui->deviceTableWidget->setColumnCount(5);
+    ui->deviceTableWidget->setHorizontalHeaderLabels(QStringList()
+    << "Nombre" << "Tipo" << "IP" << "Calibración" << "Estado");
     ui->deviceTableWidget->horizontalHeader()->setStretchLastSection(true);
 
     connect(ui->addButton, &QPushButton::clicked, this, &MainWindow::onAddButtonClicked);
@@ -22,7 +25,16 @@ MainWindow::MainWindow(const User &user, QWidget *parent)
     connect(ui->actionLogout, &QAction::triggered, this, &MainWindow::onActionLogoutTriggered);
 
     loadDevices();
+    statusTimer = new QTimer(this);
+    connect(statusTimer, &QTimer::timeout, this, &MainWindow::updateDeviceStatuses);
+    statusTimer->start(10000); // cada 10 segundos
+
+    connect(ui->refreshIntervalSpinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+            this, [=](int seconds){
+                statusTimer->setInterval(seconds * 1000); // convertir a milisegundos
+            });
 }
+
 
 MainWindow::~MainWindow()
 {
@@ -33,6 +45,9 @@ void MainWindow::loadDevices()
 {
     QList<Device> devices = DeviceManager::getDevicesForUser(currentUser.id);
     ui->deviceTableWidget->setRowCount(devices.size());
+    ui->deviceTableWidget->setColumnCount(5);
+    ui->deviceTableWidget->setHorizontalHeaderLabels(QStringList()
+       << "Nombre" << "Tipo" << "IP" << "Calibración" << "Estado");
 
     for (int i = 0; i < devices.size(); ++i) {
         const Device &d = devices[i];
@@ -40,6 +55,10 @@ void MainWindow::loadDevices()
         ui->deviceTableWidget->setItem(i, 1, new QTableWidgetItem(d.type));
         ui->deviceTableWidget->setItem(i, 2, new QTableWidgetItem(d.ipAddress));
         ui->deviceTableWidget->setItem(i, 3, new QTableWidgetItem(d.calibrationParams));
+
+        QTableWidgetItem* estadoItem = new QTableWidgetItem("Verificando...");
+        estadoItem->setForeground(Qt::gray);
+        ui->deviceTableWidget->setItem(i, 4, estadoItem);
     }
 }
 
@@ -131,3 +150,18 @@ void MainWindow::onDeleteButtonClicked()
     }
 }
 
+void MainWindow::updateDeviceStatuses()
+{
+    for (int i = 0; i < ui->deviceTableWidget->rowCount(); ++i) {
+        QString ip = ui->deviceTableWidget->item(i, 2)->text();
+
+        // Simulación: 50% de probabilidad de estar activo
+        bool activo = (QRandomGenerator::global()->bounded(2) == 1);
+
+        QString estadoTexto = activo ? "Activo" : "Inactivo";
+        QTableWidgetItem *estadoItem = new QTableWidgetItem(estadoTexto);
+        estadoItem->setForeground(activo ? Qt::green : Qt::red);
+
+        ui->deviceTableWidget->setItem(i, 4, estadoItem);
+    }
+}

@@ -18,6 +18,7 @@
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
@@ -29,9 +30,6 @@ class Ui_MainWindow
 {
 public:
     QAction *actionLogout;
-    QMenuBar *menubar;
-    QMenu *menuArchivo;
-    QStatusBar *statusbar;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QTableWidget *deviceTableWidget;
@@ -39,6 +37,10 @@ public:
     QPushButton *addButton;
     QPushButton *editButton;
     QPushButton *deleteButton;
+    QSpinBox *refreshIntervalSpinBox;
+    QMenuBar *menubar;
+    QMenu *menuArchivo;
+    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -47,15 +49,6 @@ public:
         MainWindow->resize(600, 400);
         actionLogout = new QAction(MainWindow);
         actionLogout->setObjectName(QString::fromUtf8("actionLogout"));
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 600, 20));
-        menuArchivo = new QMenu(menubar);
-        menuArchivo->setObjectName(QString::fromUtf8("menuArchivo"));
-        MainWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        MainWindow->setStatusBar(statusbar);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -95,7 +88,24 @@ public:
 
         verticalLayout->addLayout(buttonLayout);
 
+        refreshIntervalSpinBox = new QSpinBox(centralwidget);
+        refreshIntervalSpinBox->setObjectName(QString::fromUtf8("refreshIntervalSpinBox"));
+        refreshIntervalSpinBox->setMinimum(1);
+        refreshIntervalSpinBox->setMaximum(60);
+        refreshIntervalSpinBox->setValue(10);
+
+        verticalLayout->addWidget(refreshIntervalSpinBox);
+
         MainWindow->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(MainWindow);
+        menubar->setObjectName(QString::fromUtf8("menubar"));
+        menubar->setGeometry(QRect(0, 0, 600, 19));
+        menuArchivo = new QMenu(menubar);
+        menuArchivo->setObjectName(QString::fromUtf8("menuArchivo"));
+        MainWindow->setMenuBar(menubar);
+        statusbar = new QStatusBar(MainWindow);
+        statusbar->setObjectName(QString::fromUtf8("statusbar"));
+        MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menuArchivo->menuAction());
         menuArchivo->addAction(actionLogout);
@@ -109,7 +119,6 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Gestor de Dispositivos IoT", nullptr));
         actionLogout->setText(QCoreApplication::translate("MainWindow", "Cerrar sesi\303\263n", nullptr));
-        menuArchivo->setTitle(QCoreApplication::translate("MainWindow", "Archivo", nullptr));
         QTableWidgetItem *___qtablewidgetitem = deviceTableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QCoreApplication::translate("MainWindow", "Nombre", nullptr));
         QTableWidgetItem *___qtablewidgetitem1 = deviceTableWidget->horizontalHeaderItem(1);
@@ -121,6 +130,8 @@ public:
         addButton->setText(QCoreApplication::translate("MainWindow", "Agregar", nullptr));
         editButton->setText(QCoreApplication::translate("MainWindow", "Editar", nullptr));
         deleteButton->setText(QCoreApplication::translate("MainWindow", "Eliminar", nullptr));
+        refreshIntervalSpinBox->setSuffix(QCoreApplication::translate("MainWindow", "s", nullptr));
+        menuArchivo->setTitle(QCoreApplication::translate("MainWindow", "Archivo", nullptr));
     } // retranslateUi
 
 };

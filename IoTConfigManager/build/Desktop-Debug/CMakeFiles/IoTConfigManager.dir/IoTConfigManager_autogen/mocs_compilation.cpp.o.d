@@ -297,5 +297,8 @@ CMakeFiles/IoTConfigManager.dir/IoTConfigManager_autogen/mocs_compilation.cpp.o:
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
  /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/moc_registerwindow.cpp \
  /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/../../../../registerwindow.h

@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTimer> //usar Qtimer
 #include "user.h"
 
 namespace Ui {
@@ -22,10 +23,12 @@ private slots:
     void onEditButtonClicked();
     void onDeleteButtonClicked();
     void onActionLogoutTriggered();
+    void updateDeviceStatuses();
 
 private:
     Ui::MainWindow *ui;
     User currentUser;
+    QTimer *statusTimer; //temporizador para actualizar el estado
 };
 
 #endif // MAINWINDOW_H
