@@ -10,8 +10,6 @@ LoginWindow::LoginWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->errorLabel->setVisible(false);  // Ocultar mensaje de error al inicio
 
-    // También podrías conectar el botón así si no usas el slot por nombre:
-    connect(ui->registerButton, &QPushButton::clicked, this, &LoginWindow::on_registerButton_clicked);
 
 }
 

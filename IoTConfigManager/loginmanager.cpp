@@ -20,6 +20,9 @@ bool Loginmanager::userExists(const QString &username)
 
 bool Loginmanager::createUser(const QString &username, const QString &password)
 {
+    if (username.trimmed().isEmpty() || password.isEmpty())
+        return false;
+
     if (userExists(username))
         return false;
 
@@ -31,6 +34,8 @@ bool Loginmanager::createUser(const QString &username, const QString &password)
     q.addBindValue(hash);
     return q.exec();
 }
+
+
 bool Loginmanager::login(const QString &username, const QString &password, User &userOut) {
     QSqlQuery q;
     q.prepare("SELECT id, username, password_hash FROM users WHERE username = ?");
