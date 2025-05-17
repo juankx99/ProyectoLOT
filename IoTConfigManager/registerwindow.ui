@@ -1,60 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AddDeviceDialog</class>
- <widget class="QDialog" name="AddDeviceDialog">
+ <class>RegisterWindow</class>
+ <widget class="QDialog" name="RegisterWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>350</width>
-    <height>250</height>
+    <width>360</width>
+    <height>240</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Agregar Dispositivo</string>
+   <string>Registrar Usuario</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QFormLayout" name="formLayout">
      <item row="0" column="0">
-      <widget class="QLabel" name="labelName">
+      <widget class="QLabel" name="labelUsername">
        <property name="text">
-        <string>Nombre:</string>
+        <string>Usuario:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEditName"/>
+      <widget class="QLineEdit" name="lineEditUsername"/>
      </item>
      <item row="1" column="0">
-      <widget class="QLabel" name="labelType">
+      <widget class="QLabel" name="labelPassword">
        <property name="text">
-        <string>Tipo:</string>
+        <string>Contraseña:</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEditType"/>
+      <widget class="QLineEdit" name="lineEditPassword">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QLabel" name="labelIP">
+      <widget class="QLabel" name="labelConfirm">
        <property name="text">
-        <string>IP:</string>
+        <string>Confirmar contraseña:</string>
        </property>
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEditIP"/>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="labelCalibration">
-       <property name="text">
-        <string>Calibración:</string>
+      <widget class="QLineEdit" name="lineEditConfirm">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
        </property>
       </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QLineEdit" name="lineEditCalibration"/>
      </item>
     </layout>
    </item>

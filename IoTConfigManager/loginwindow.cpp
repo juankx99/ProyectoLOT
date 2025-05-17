@@ -1,7 +1,8 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
 #include "loginmanager.h"
-
+#include "registerwindow.h"
+#include <QMessageBox>
 LoginWindow::LoginWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::LoginWindow)
@@ -10,7 +11,8 @@ LoginWindow::LoginWindow(QWidget *parent) :
     ui->errorLabel->setVisible(false);  // Ocultar mensaje de error al inicio
 
     // También podrías conectar el botón así si no usas el slot por nombre:
-    // connect(ui->loginButton, &QPushButton::clicked, this, &LoginWindow::on_loginButton_clicked);
+    connect(ui->registerButton, &QPushButton::clicked, this, &LoginWindow::on_registerButton_clicked);
+
 }
 
 LoginWindow::~LoginWindow()
@@ -22,7 +24,13 @@ User LoginWindow::getUser() const
 {
     return loggedUser;
 }
-
+void LoginWindow::on_registerButton_clicked()
+{
+    RegisterWindow registerDialog(this);
+    if (registerDialog.exec() == QDialog::Accepted) {
+        QMessageBox::information(this, "Registro exitoso", "Usuario creado con éxito. Ahora puedes iniciar sesión.");
+    }
+}
 void LoginWindow::on_loginButton_clicked()
 {
     QString username = ui->usernameLineEdit->text();

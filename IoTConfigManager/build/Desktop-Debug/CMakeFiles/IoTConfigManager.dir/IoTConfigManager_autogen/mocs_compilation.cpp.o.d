@@ -1,7 +1,7 @@
 CMakeFiles/IoTConfigManager.dir/IoTConfigManager_autogen/mocs_compilation.cpp.o: \
  /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/moc_loginwindow.cpp \
+ /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/moc_adddevicedialog.cpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -116,7 +116,7 @@ CMakeFiles/IoTConfigManager.dir/IoTConfigManager_autogen/mocs_compilation.cpp.o:
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/../../../../loginwindow.h \
+ /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/../../../../adddevicedialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -285,12 +285,17 @@ CMakeFiles/IoTConfigManager.dir/IoTConfigManager_autogen/mocs_compilation.cpp.o:
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
- /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/../../../../user.h \
+ /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/../../../../device.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
+ /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/moc_loginwindow.cpp \
+ /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/../../../../loginwindow.h \
+ /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/../../../../user.h \
  /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/moc_mainwindow.cpp \
  /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/../../../../mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+ /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/moc_registerwindow.cpp \
+ /home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/IoTConfigManager_autogen/EWIEGA46WW/../../../../registerwindow.h

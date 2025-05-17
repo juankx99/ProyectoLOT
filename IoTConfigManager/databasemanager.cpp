@@ -1,7 +1,7 @@
 #include "databasemanager.h"
 #include <QSqlQuery>
 #include <QDebug>
-
+#include "loginmanager.h"
 bool DatabaseManager::connect() {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("iot_config.db");
@@ -24,3 +24,4 @@ void DatabaseManager::initTables() {
            "calibration_params TEXT,"
            "FOREIGN KEY(user_id) REFERENCES users(id))");
 }
+

@@ -1,5 +1,7 @@
 IoTConfigManager_autogen/timestamp: \
 	/home/juan/proyectoLOT/IoTConfigManager/CMakeLists.txt \
+	/home/juan/proyectoLOT/IoTConfigManager/adddevicedialog.cpp \
+	/home/juan/proyectoLOT/IoTConfigManager/adddevicedialog.h \
 	/home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/.qtc/package-manager/auto-setup.cmake \
 	/home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
 	/home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/CMakeFiles/3.28.3/CMakeSystem.cmake \
@@ -17,6 +19,8 @@ IoTConfigManager_autogen/timestamp: \
 	/home/juan/proyectoLOT/IoTConfigManager/main.cpp \
 	/home/juan/proyectoLOT/IoTConfigManager/mainwindow.cpp \
 	/home/juan/proyectoLOT/IoTConfigManager/mainwindow.h \
+	/home/juan/proyectoLOT/IoTConfigManager/registerwindow.cpp \
+	/home/juan/proyectoLOT/IoTConfigManager/registerwindow.h \
 	/home/juan/proyectoLOT/IoTConfigManager/user.cpp \
 	/home/juan/proyectoLOT/IoTConfigManager/user.h \
 	/usr/include/asm-generic/errno-base.h \
@@ -411,6 +415,8 @@ IoTConfigManager_autogen/timestamp: \
 	/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/Linux.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake \
+	/home/juan/proyectoLOT/IoTConfigManager/adddevicedialog.ui \
 	/home/juan/proyectoLOT/IoTConfigManager/loginwindow.ui \
 	/home/juan/proyectoLOT/IoTConfigManager/mainwindow.ui \
+	/home/juan/proyectoLOT/IoTConfigManager/registerwindow.ui \
 	/usr/bin/cmake

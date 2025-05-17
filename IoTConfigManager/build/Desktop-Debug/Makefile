@@ -224,6 +224,30 @@ IoTConfigManager_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IoTConfigManager.dir/build.make CMakeFiles/IoTConfigManager.dir/IoTConfigManager_autogen/mocs_compilation.cpp.s
 .PHONY : IoTConfigManager_autogen/mocs_compilation.cpp.s
 
+adddevicedialog.o: adddevicedialog.cpp.o
+.PHONY : adddevicedialog.o
+
+# target to build an object file
+adddevicedialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IoTConfigManager.dir/build.make CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.o
+.PHONY : adddevicedialog.cpp.o
+
+adddevicedialog.i: adddevicedialog.cpp.i
+.PHONY : adddevicedialog.i
+
+# target to preprocess a source file
+adddevicedialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IoTConfigManager.dir/build.make CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.i
+.PHONY : adddevicedialog.cpp.i
+
+adddevicedialog.s: adddevicedialog.cpp.s
+.PHONY : adddevicedialog.s
+
+# target to generate assembly for a file
+adddevicedialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IoTConfigManager.dir/build.make CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.s
+.PHONY : adddevicedialog.cpp.s
+
 databasemanager.o: databasemanager.cpp.o
 .PHONY : databasemanager.o
 
@@ -392,6 +416,30 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IoTConfigManager.dir/build.make CMakeFiles/IoTConfigManager.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+registerwindow.o: registerwindow.cpp.o
+.PHONY : registerwindow.o
+
+# target to build an object file
+registerwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IoTConfigManager.dir/build.make CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.o
+.PHONY : registerwindow.cpp.o
+
+registerwindow.i: registerwindow.cpp.i
+.PHONY : registerwindow.i
+
+# target to preprocess a source file
+registerwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IoTConfigManager.dir/build.make CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.i
+.PHONY : registerwindow.cpp.i
+
+registerwindow.s: registerwindow.cpp.s
+.PHONY : registerwindow.s
+
+# target to generate assembly for a file
+registerwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IoTConfigManager.dir/build.make CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.s
+.PHONY : registerwindow.cpp.s
+
 user.o: user.cpp.o
 .PHONY : user.o
 
@@ -434,6 +482,9 @@ help:
 	@echo "... IoTConfigManager_autogen/mocs_compilation.o"
 	@echo "... IoTConfigManager_autogen/mocs_compilation.i"
 	@echo "... IoTConfigManager_autogen/mocs_compilation.s"
+	@echo "... adddevicedialog.o"
+	@echo "... adddevicedialog.i"
+	@echo "... adddevicedialog.s"
 	@echo "... databasemanager.o"
 	@echo "... databasemanager.i"
 	@echo "... databasemanager.s"
@@ -455,6 +506,9 @@ help:
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... registerwindow.o"
+	@echo "... registerwindow.i"
+	@echo "... registerwindow.s"
 	@echo "... user.o"
 	@echo "... user.i"
 	@echo "... user.s"

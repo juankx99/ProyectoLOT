@@ -19,6 +19,8 @@ public:
 private slots:
     void loadDevices();
     void onAddButtonClicked();
+    void onEditButtonClicked();
+    void onDeleteButtonClicked();
 
 private:
     Ui::MainWindow *ui;
@@ -26,3 +28,4 @@ private:
 };
 
 #endif // MAINWINDOW_H
+

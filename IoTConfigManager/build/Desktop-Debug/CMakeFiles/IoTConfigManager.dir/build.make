@@ -202,6 +202,34 @@ CMakeFiles/IoTConfigManager.dir/loginwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/IoTConfigManager.dir/loginwindow.cpp.s"
 	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/proyectoLOT/IoTConfigManager/loginwindow.cpp -o CMakeFiles/IoTConfigManager.dir/loginwindow.cpp.s
 
+CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.o: CMakeFiles/IoTConfigManager.dir/flags.make
+CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.o: /home/juan/proyectoLOT/IoTConfigManager/adddevicedialog.cpp
+CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.o: CMakeFiles/IoTConfigManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.o"
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.o -MF CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.o.d -o CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.o -c /home/juan/proyectoLOT/IoTConfigManager/adddevicedialog.cpp
+
+CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.i"
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/proyectoLOT/IoTConfigManager/adddevicedialog.cpp > CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.i
+
+CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.s"
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/proyectoLOT/IoTConfigManager/adddevicedialog.cpp -o CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.s
+
+CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.o: CMakeFiles/IoTConfigManager.dir/flags.make
+CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.o: /home/juan/proyectoLOT/IoTConfigManager/registerwindow.cpp
+CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.o: CMakeFiles/IoTConfigManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.o"
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.o -MF CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.o.d -o CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.o -c /home/juan/proyectoLOT/IoTConfigManager/registerwindow.cpp
+
+CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.i"
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/proyectoLOT/IoTConfigManager/registerwindow.cpp > CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.i
+
+CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.s"
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/proyectoLOT/IoTConfigManager/registerwindow.cpp -o CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.s
+
 # Object files for target IoTConfigManager
 IoTConfigManager_OBJECTS = \
 "CMakeFiles/IoTConfigManager.dir/IoTConfigManager_autogen/mocs_compilation.cpp.o" \
@@ -212,7 +240,9 @@ IoTConfigManager_OBJECTS = \
 "CMakeFiles/IoTConfigManager.dir/device.cpp.o" \
 "CMakeFiles/IoTConfigManager.dir/devicemanager.cpp.o" \
 "CMakeFiles/IoTConfigManager.dir/loginmanager.cpp.o" \
-"CMakeFiles/IoTConfigManager.dir/loginwindow.cpp.o"
+"CMakeFiles/IoTConfigManager.dir/loginwindow.cpp.o" \
+"CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.o" \
+"CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.o"
 
 # External object files for target IoTConfigManager
 IoTConfigManager_EXTERNAL_OBJECTS =
@@ -226,13 +256,15 @@ IoTConfigManager: CMakeFiles/IoTConfigManager.dir/device.cpp.o
 IoTConfigManager: CMakeFiles/IoTConfigManager.dir/devicemanager.cpp.o
 IoTConfigManager: CMakeFiles/IoTConfigManager.dir/loginmanager.cpp.o
 IoTConfigManager: CMakeFiles/IoTConfigManager.dir/loginwindow.cpp.o
+IoTConfigManager: CMakeFiles/IoTConfigManager.dir/adddevicedialog.cpp.o
+IoTConfigManager: CMakeFiles/IoTConfigManager.dir/registerwindow.cpp.o
 IoTConfigManager: CMakeFiles/IoTConfigManager.dir/build.make
 IoTConfigManager: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 IoTConfigManager: /usr/lib/x86_64-linux-gnu/libQt5Sql.so.5.15.13
 IoTConfigManager: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 IoTConfigManager: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 IoTConfigManager: CMakeFiles/IoTConfigManager.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable IoTConfigManager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/juan/proyectoLOT/IoTConfigManager/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable IoTConfigManager"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/IoTConfigManager.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

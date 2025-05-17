@@ -78,6 +78,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/juan/proyectoLOT/IoTConfigManager/adddevicedialog.h",
+			"MU",
+			"EWIEGA46WW/moc_adddevicedialog.cpp",
+			null
+		],
+		[
 			"/home/juan/proyectoLOT/IoTConfigManager/databasemanager.h",
 			"MU",
 			"EWIEGA46WW/moc_databasemanager.cpp",
@@ -111,6 +117,12 @@
 			"/home/juan/proyectoLOT/IoTConfigManager/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/juan/proyectoLOT/IoTConfigManager/registerwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_registerwindow.cpp",
 			null
 		],
 		[
@@ -173,6 +185,11 @@
 	"SOURCES" : 
 	[
 		[
+			"/home/juan/proyectoLOT/IoTConfigManager/adddevicedialog.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/juan/proyectoLOT/IoTConfigManager/databasemanager.cpp",
 			"MU",
 			null
@@ -191,6 +208,11 @@
 		[ "/home/juan/proyectoLOT/IoTConfigManager/loginwindow.cpp", "MU", null ],
 		[ "/home/juan/proyectoLOT/IoTConfigManager/main.cpp", "MU", null ],
 		[ "/home/juan/proyectoLOT/IoTConfigManager/mainwindow.cpp", "MU", null ],
+		[
+			"/home/juan/proyectoLOT/IoTConfigManager/registerwindow.cpp",
+			"MU",
+			null
+		],
 		[ "/home/juan/proyectoLOT/IoTConfigManager/user.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

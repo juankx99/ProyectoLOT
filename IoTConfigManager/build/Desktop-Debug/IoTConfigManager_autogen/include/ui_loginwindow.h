@@ -30,13 +30,14 @@ public:
     QLabel *passLabel;
     QLineEdit *passwordLineEdit;
     QPushButton *loginButton;
+    QPushButton *registerButton;
     QLabel *errorLabel;
 
     void setupUi(QDialog *LoginWindow)
     {
         if (LoginWindow->objectName().isEmpty())
             LoginWindow->setObjectName(QString::fromUtf8("LoginWindow"));
-        LoginWindow->resize(300, 180);
+        LoginWindow->resize(320, 200);
         verticalLayout = new QVBoxLayout(LoginWindow);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         formLayout = new QFormLayout();
@@ -70,6 +71,11 @@ public:
 
         verticalLayout->addWidget(loginButton);
 
+        registerButton = new QPushButton(LoginWindow);
+        registerButton->setObjectName(QString::fromUtf8("registerButton"));
+
+        verticalLayout->addWidget(registerButton);
+
         errorLabel = new QLabel(LoginWindow);
         errorLabel->setObjectName(QString::fromUtf8("errorLabel"));
         errorLabel->setAlignment(Qt::AlignCenter);
@@ -90,6 +96,7 @@ public:
         userLabel->setText(QCoreApplication::translate("LoginWindow", "Usuario:", nullptr));
         passLabel->setText(QCoreApplication::translate("LoginWindow", "Contrase\303\261a:", nullptr));
         loginButton->setText(QCoreApplication::translate("LoginWindow", "Iniciar sesi\303\263n", nullptr));
+        registerButton->setText(QCoreApplication::translate("LoginWindow", "Crear cuenta", nullptr));
         errorLabel->setText(QCoreApplication::translate("LoginWindow", "Usuario o contrase\303\261a incorrectos", nullptr));
     } // retranslateUi
 

@@ -2,6 +2,9 @@
 #include "databasemanager.h"
 #include "loginwindow.h"
 #include "mainwindow.h"
+#include <QSqlQuery>
+#include "loginmanager.h"
+
 
 int main(int argc, char *argv[])
 {

@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
@@ -26,7 +27,10 @@ public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QTableWidget *deviceTableWidget;
+    QHBoxLayout *buttonLayout;
     QPushButton *addButton;
+    QPushButton *editButton;
+    QPushButton *deleteButton;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -52,10 +56,25 @@ public:
 
         verticalLayout->addWidget(deviceTableWidget);
 
+        buttonLayout = new QHBoxLayout();
+        buttonLayout->setObjectName(QString::fromUtf8("buttonLayout"));
         addButton = new QPushButton(centralwidget);
         addButton->setObjectName(QString::fromUtf8("addButton"));
 
-        verticalLayout->addWidget(addButton);
+        buttonLayout->addWidget(addButton);
+
+        editButton = new QPushButton(centralwidget);
+        editButton->setObjectName(QString::fromUtf8("editButton"));
+
+        buttonLayout->addWidget(editButton);
+
+        deleteButton = new QPushButton(centralwidget);
+        deleteButton->setObjectName(QString::fromUtf8("deleteButton"));
+
+        buttonLayout->addWidget(deleteButton);
+
+
+        verticalLayout->addLayout(buttonLayout);
 
         MainWindow->setCentralWidget(centralwidget);
 
@@ -76,6 +95,8 @@ public:
         QTableWidgetItem *___qtablewidgetitem3 = deviceTableWidget->horizontalHeaderItem(3);
         ___qtablewidgetitem3->setText(QCoreApplication::translate("MainWindow", "Calibraci\303\263n", nullptr));
         addButton->setText(QCoreApplication::translate("MainWindow", "Agregar", nullptr));
+        editButton->setText(QCoreApplication::translate("MainWindow", "Editar", nullptr));
+        deleteButton->setText(QCoreApplication::translate("MainWindow", "Eliminar", nullptr));
     } // retranslateUi
 
 };

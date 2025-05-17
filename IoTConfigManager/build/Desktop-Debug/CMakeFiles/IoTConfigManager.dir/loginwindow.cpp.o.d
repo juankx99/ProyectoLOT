@@ -325,4 +325,8 @@ CMakeFiles/IoTConfigManager.dir/loginwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
- /home/juan/proyectoLOT/IoTConfigManager/loginmanager.h
+ /home/juan/proyectoLOT/IoTConfigManager/loginmanager.h \
+ /home/juan/proyectoLOT/IoTConfigManager/registerwindow.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h

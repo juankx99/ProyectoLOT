@@ -265,4 +265,8 @@ CMakeFiles/IoTConfigManager.dir/databasemanager.cpp.o: \
  /usr/include/c++/13/ext/concurrence.h \
  /usr/include/c++/13/bits/shared_ptr_atomic.h \
  /usr/include/c++/13/backward/auto_ptr.h \
- /usr/include/c++/13/pstl/glue_memory_defs.h
+ /usr/include/c++/13/pstl/glue_memory_defs.h \
+ /home/juan/proyectoLOT/IoTConfigManager/loginmanager.h \
+ /home/juan/proyectoLOT/IoTConfigManager/user.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h

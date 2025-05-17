@@ -31,6 +31,9 @@ set(PROJECT_SOURCES
     loginwindow.cpp
     loginwindow.h
     loginwindow.ui
+    adddevicedialog.cpp
+    adddevicedialog.h
+    adddevicedialog.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -47,6 +50,7 @@ else()
         add_executable(IoTConfigManager
             ${PROJECT_SOURCES}
             adddevicedialog.h adddevicedialog.cpp adddevicedialog.ui
+            registerwindow.h registerwindow.cpp registerwindow.ui
         )
     endif()
 endif()
