@@ -10,11 +10,15 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -24,6 +28,10 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionLogout;
+    QMenuBar *menubar;
+    QMenu *menuArchivo;
+    QStatusBar *statusbar;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QTableWidget *deviceTableWidget;
@@ -37,6 +45,17 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(600, 400);
+        actionLogout = new QAction(MainWindow);
+        actionLogout->setObjectName(QString::fromUtf8("actionLogout"));
+        menubar = new QMenuBar(MainWindow);
+        menubar->setObjectName(QString::fromUtf8("menubar"));
+        menubar->setGeometry(QRect(0, 0, 600, 20));
+        menuArchivo = new QMenu(menubar);
+        menuArchivo->setObjectName(QString::fromUtf8("menuArchivo"));
+        MainWindow->setMenuBar(menubar);
+        statusbar = new QStatusBar(MainWindow);
+        statusbar->setObjectName(QString::fromUtf8("statusbar"));
+        MainWindow->setStatusBar(statusbar);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -78,6 +97,9 @@ public:
 
         MainWindow->setCentralWidget(centralwidget);
 
+        menubar->addAction(menuArchivo->menuAction());
+        menuArchivo->addAction(actionLogout);
+
         retranslateUi(MainWindow);
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -86,6 +108,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Gestor de Dispositivos IoT", nullptr));
+        actionLogout->setText(QCoreApplication::translate("MainWindow", "Cerrar sesi\303\263n", nullptr));
+        menuArchivo->setTitle(QCoreApplication::translate("MainWindow", "Archivo", nullptr));
         QTableWidgetItem *___qtablewidgetitem = deviceTableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QCoreApplication::translate("MainWindow", "Nombre", nullptr));
         QTableWidgetItem *___qtablewidgetitem1 = deviceTableWidget->horizontalHeaderItem(1);

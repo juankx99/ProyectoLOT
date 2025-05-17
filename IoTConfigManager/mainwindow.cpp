@@ -5,6 +5,7 @@
 #include <QTableWidgetItem>
 #include <QMessageBox>
 #include <QLineEdit>
+#include "loginwindow.h"
 
 MainWindow::MainWindow(const User &user, QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow), currentUser(user)
@@ -18,6 +19,7 @@ MainWindow::MainWindow(const User &user, QWidget *parent)
     connect(ui->addButton, &QPushButton::clicked, this, &MainWindow::onAddButtonClicked);
     connect(ui->editButton, &QPushButton::clicked, this, &MainWindow::onEditButtonClicked);
     connect(ui->deleteButton, &QPushButton::clicked, this, &MainWindow::onDeleteButtonClicked);
+    connect(ui->actionLogout, &QAction::triggered, this, &MainWindow::onActionLogoutTriggered);
 
     loadDevices();
 }
@@ -55,6 +57,20 @@ void MainWindow::onAddButtonClicked()
         }
     }
 }
+
+void MainWindow::onActionLogoutTriggered()
+{
+    this->close();
+
+    LoginWindow loginDialog;
+    if (loginDialog.exec() == QDialog::Accepted) {
+        MainWindow *newMain = new MainWindow(loginDialog.getUser());
+        newMain->show();
+    } else {
+        qApp->quit();
+    }
+}
+
 
 void MainWindow::onEditButtonClicked()
 {

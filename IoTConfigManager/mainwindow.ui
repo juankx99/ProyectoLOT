@@ -13,6 +13,30 @@
   <property name="windowTitle">
    <string>Gestor de Dispositivos IoT</string>
   </property>
+
+  <!-- Barra de menú -->
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionLogout"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+  </widget>
+
+  <!-- Barra de estado (vacía, pero estándar) -->
+  <widget class="QStatusBar" name="statusbar"/>
+
+  <!-- Widget central con tabla y botones -->
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
@@ -66,6 +90,14 @@
     </item>
    </layout>
   </widget>
+
+  <!-- Acción para cerrar sesión -->
+  <action name="actionLogout">
+   <property name="text">
+    <string>Cerrar sesión</string>
+   </property>
+  </action>
+
  </widget>
  <resources/>
  <connections/>

@@ -21,6 +21,7 @@ private slots:
     void onAddButtonClicked();
     void onEditButtonClicked();
     void onDeleteButtonClicked();
+    void onActionLogoutTriggered();
 
 private:
     Ui::MainWindow *ui;

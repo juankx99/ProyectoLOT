@@ -8,6 +8,8 @@ RegisterWindow::RegisterWindow(QWidget *parent) :
     ui(new Ui::RegisterWindow)
 {
     ui->setupUi(this);
+    connect(ui->buttonBox, &QDialogButtonBox::accepted, this, &RegisterWindow::accept);
+    connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &RegisterWindow::reject);
 }
 
 RegisterWindow::~RegisterWindow()
